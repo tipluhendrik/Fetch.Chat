@@ -1,0 +1,84 @@
+.app {
+    height: 600px;
+    width: 600px;
+}
+
+.tabs {
+    height: 50px;
+    padding: 6px;
+    background-color: lightgray;
+    border-radius: 6px;
+}
+
+.tabs > div {
+    display: inline-block;
+    height: 38px;
+    width: 100px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 6px;
+}
+
+.tabs > div:hover {
+    cursor: pointer;
+}
+
+.tabs > .tab_item--active {
+    background-color: white;
+}
+
+.panels > div {
+    height: 550px;
+    width: auto;
+    display: none;
+    flex-direction: column;
+}
+
+.panels > .panel--active {
+    display: flex;
+}
+
+.messages {
+    flex: 1;
+}
+
+.messages > li {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+}
+
+.message-own {
+    justify-content: end;
+}
+
+.user {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 10px;
+    background-color: lightseagreen;
+}
+
+.content {
+    background-color: lightskyblue;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.actions {
+    height: 50px;
+}
+
+.actions input {
+    height: 50px;
+    width: 500px;
+}
+
+.actions button {
+    height: 50px;
+    width: 100px;
+}
