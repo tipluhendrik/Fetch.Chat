@@ -17,7 +17,7 @@ namespace Fetch.Chat.Web.Controllers
         [HttpGet(Name = "messages")]
         public IReadOnlyCollection<Message> GetAllMessages()
         {
-            return _chatService.GetAllMessages();
+            return _chatService.GetMessages();
         }
 
         [HttpPost(Name = "sendmessage")]
