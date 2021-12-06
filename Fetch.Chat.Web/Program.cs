@@ -31,8 +31,3 @@ app.MapControllers();
 app.Run();
 
 var port = 30051;
-var server = new Server
-{
-    Services = { ChatRoom.BindService(new ChatRoomService(chatService)) },
-    Ports = { new ServerPort("localhost", port, ServerCredentials.Insecure) }
-};
