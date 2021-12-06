@@ -10,7 +10,11 @@ namespace Fetch.Chat.Domain
     {
         public void AddMessage(Message message);
 
-        public IReadOnlyCollection<Message> GetAllMessages();
+        public void AddSportMessage(Message message);
+
+        public IReadOnlyCollection<Message> GetMessages();
+
+        public IReadOnlyCollection<Message> GetSportMessages();
     }
 
     public record Message(string User, string Content);
