@@ -13,11 +13,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
+builder.Services.AddCors();
 
 IChatService chatService = new ChatService();
 builder.Services.AddSingleton<IChatService>(chatService);
 
 var app = builder.Build();
+
+app.UseCors(builder => builder
+    .AllowCredentials()
+);
+
+app.MapControllers();
 
 app.MapHub<ChatHub>("/chatHub");
 // Configure the HTTP request pipeline.
@@ -28,9 +35,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
-app.MapControllers();
-
 app.Run();
 
 var port = 30051;
