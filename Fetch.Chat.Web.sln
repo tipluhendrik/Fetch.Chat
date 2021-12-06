@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetch.Chat.Domain", "Fetch.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fetch.Chat.Infrastructure", "Fetch.Chat.Infrastructure\Fetch.Chat.Infrastructure.csproj", "{52C70DD6-ADE4-4523-A542-051C0CE0AC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fetch.Chat.ConsoleClient", "Fetch.Chat.ConsoleClient\Fetch.Chat.ConsoleClient.csproj", "{D6BD6F44-455D-4EEE-BA41-06DE4A45B48B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{52C70DD6-ADE4-4523-A542-051C0CE0AC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C70DD6-ADE4-4523-A542-051C0CE0AC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C70DD6-ADE4-4523-A542-051C0CE0AC39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6BD6F44-455D-4EEE-BA41-06DE4A45B48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6BD6F44-455D-4EEE-BA41-06DE4A45B48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6BD6F44-455D-4EEE-BA41-06DE4A45B48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6BD6F44-455D-4EEE-BA41-06DE4A45B48B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

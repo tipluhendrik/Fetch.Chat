@@ -1,8 +1,6 @@
 using Fetch.Chat.Domain;
 using Fetch.Chat.Infrastructure;
 using Fetch.Chat.Web;
-using Fetchchat;
-using Grpc.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,16 +11,24 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
-builder.Services.AddCors();
+
+builder.Services.AddCors(options =>
+{
+    // this defines a CORS policy called "default"
+    options.AddPolicy("default", policy =>
+    {
+        policy.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 IChatService chatService = new ChatService();
 builder.Services.AddSingleton<IChatService>(chatService);
 
 var app = builder.Build();
 
-app.UseCors(builder => builder
-    .AllowCredentials()
-);
+app.UseCors("default");
 
 app.MapControllers();
 
@@ -36,5 +42,3 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 app.Run();
-
-var port = 30051;
