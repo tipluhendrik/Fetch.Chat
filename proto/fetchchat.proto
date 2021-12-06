@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package fetchchat;
+
+service ChatRoom {
+  rpc Send(ChatMessage) returns (ChatResponse) {}
+}
+
+message ChatMessage {
+  string user = 1;
+  string message = 2;
+}
+message ChatResponse {
+  int64 unixTime = 1;
+  bool success = 2;
+}
