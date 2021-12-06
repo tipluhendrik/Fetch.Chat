@@ -27,13 +27,13 @@ namespace Fetch.Chat.Web
 
         public async Task SendMessage(string user, string message)
         {
-            _chatService.AddMessage(new(user, message));
+            _chatService.AddMessage(new(Guid.NewGuid(), user, message));
             await Clients.All.SendAsync(receiveMessageEvent, user, message);
         }
 
         public async Task SendMessageToSport(string user, string message)
         {
-            _chatService.AddMessage(new(user, message));
+            _chatService.AddMessage(new(Guid.NewGuid(), user, message));
             await Clients.Groups(sportChannel).SendAsync(receiveMessageEvent, user, message);
         }
 

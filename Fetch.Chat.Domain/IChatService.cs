@@ -16,6 +16,4 @@ namespace Fetch.Chat.Domain
 
         public IReadOnlyCollection<Message> GetSportMessages();
     }
-
-    public record Message(string User, string Content);
 }
